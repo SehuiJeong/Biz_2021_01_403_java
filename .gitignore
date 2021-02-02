@@ -1,0 +1,12 @@
+.metadata/
+.settings/
+bin/
+*.class
+*.jar
+*.war
+tmp/
+*.tmp
+*.bak
+
+test/
+test1/
