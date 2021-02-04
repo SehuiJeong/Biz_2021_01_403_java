@@ -92,7 +92,6 @@ public class Var_03 {
 
 
 		
-		
 	}
 
 }
