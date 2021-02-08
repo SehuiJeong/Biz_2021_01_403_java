@@ -48,6 +48,7 @@ public class Odd_Even_01 {
 	    	int num = i + 1;
 	    	boolean bYes = num % 2 == 0;
 	    	
+	    	
 	    	// if (bYes == false) {
 	    	
 	    	// bYes가 true가 아니면
