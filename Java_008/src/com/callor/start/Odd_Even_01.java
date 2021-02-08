@@ -43,8 +43,8 @@ public class Odd_Even_01 {
 		// 반드시 초기화(clear) 해야 한다.
 
 		// 변수 첫번째 자리는 소수(잊지말자)
-		int sum = 0;
-	    for(int i = 0 ; i < 100 ; i++) {
+		int intSumOdd = 0;
+	    for(i = 0 ; i < 100 ; i++) {
 	    	int num = i + 1;
 	    	boolean bYes = num % 2 == 0;
 	    	
