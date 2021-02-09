@@ -52,6 +52,7 @@ public class BoolAlge_01 {
 		System.out.println(" t || f : " + (true || false));
 		System.out.println(" f || t : " + (false || true));
 		System.out.println(" f || f : " + (false || false));
+		
 		System.out.println("===========================================");
 		System.out.println(" t && t : " + (true && true&& true&& true&& true&& true));
 		
