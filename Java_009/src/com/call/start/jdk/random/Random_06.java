@@ -1,4 +1,4 @@
-package com.callor.start.jdk;
+package com.call.start.jdk.random;
 
 /*
  * Copy & Understand , Paste

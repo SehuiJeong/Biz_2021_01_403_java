@@ -1,4 +1,6 @@
-package com.callor.start.jdk;
+package com.call.start.jdk.random;
+
+import java.util.Random;
 
 public class Random_01 {
 

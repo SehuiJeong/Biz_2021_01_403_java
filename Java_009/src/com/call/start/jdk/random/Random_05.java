@@ -1,4 +1,4 @@
-package com.callor.start.jdk;
+package com.call.start.jdk.random;
 
 /*
  *  for(int i = 0 ; i < 100 ; i++)
