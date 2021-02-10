@@ -11,7 +11,7 @@ public class App_02 {
 		System.out.print("숫자입력 ( 2 ~ 9) >>");
 		int keyNum = scan.nextInt();
 
-		boolean bYes = (keyNum > 1) && (keyNum < 9);
+		boolean bYes = (keyNum > 1) && (keyNum < 10);
 		if (bYes) {
 
 			System.out.println("========================");
