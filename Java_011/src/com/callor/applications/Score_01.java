@@ -18,7 +18,7 @@ public class Score_01 {
 
 		// Blocking 되었다. Code Blocking
 		// scan.nextIn() 메서드를 호출하면
-		// 코드 동작이 멈추고, 사용자가 키보드로
+		// 코드 동작이 멈추고, 사용자가 키보드로 
 		// 무엇인가 입력한 후 Enter를 누를때까지
 		// 이후 코드가 실행되지 않는다.
 		int kor = scan.nextInt();
