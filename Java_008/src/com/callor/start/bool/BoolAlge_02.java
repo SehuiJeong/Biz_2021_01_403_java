@@ -18,7 +18,7 @@ public class BoolAlge_02 {
 		
 		// (num1 > 50)의 결과가 true이므로 
 		// java는 효율적인 코드 실행을 위하여
-		// || 이후의 코드는 실행도 안 함
+		// || 이후의 코드를 무시한다
 		boolean bYes5 = (num1 > 50) || (num2 += 20) > 0;
 		System.out.println(bYes5);
 

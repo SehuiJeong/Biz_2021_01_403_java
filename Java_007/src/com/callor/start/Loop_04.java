@@ -15,7 +15,7 @@ public class Loop_04 {
 			intSum += (i + 1);
 		}
 		System.out.print(intStart + 1);
-		System.out.print(" 부터 ");
+		System.out.print("부터");
 		System.out.print(intEnd);
 		System.out.print(" 까지의 덧셈 : ");
 		System.out.println(intSum);

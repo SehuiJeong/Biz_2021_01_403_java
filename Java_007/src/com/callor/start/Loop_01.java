@@ -7,9 +7,8 @@ public class Loop_01 {
 		// 100~1000 까지 100단위 숫자 출력
 		
 		int num1 = 0;
-		int java = 1;
 		for(num1 = 100 ; num1 <= 1000; num1 += 100 ); {
-			System.out.println(java * num1);
+			System.out.println(num1);
 		}
 		
 		System.out.println("======================");
@@ -28,7 +27,7 @@ public class Loop_01 {
 		}	
 			System.out.println("=============");
 			for(num1 = 1 ; num1 <= 10 ; num1 += 1) {
-				System.out.println(java + num1 + ".홍길동");
+				System.out.println( num1 + ".홍길동");
 			}		
 			System.out.println("=============");
 			for(int num = 0 ; num < 10 ; num += 1) {

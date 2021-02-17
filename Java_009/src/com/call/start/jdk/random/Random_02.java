@@ -14,7 +14,7 @@ public class Random_02 {
 		
 		int num1 = 0;
 		
-		// rnd 인스턴스에게 nextInt() 명을
+		// rnd 인스턴스에게 nextInt() 명령을
 		//		수행하도록 하고
 		// 명령이 수행된 다음 결과를 num1 변수에 담아라
 		// nextInt() 는 난수(random한 숫자)를 만드는

@@ -1,5 +1,7 @@
 package com.call.start.jdk.random;
 
+import java.util.Random;
+
 /*
  *  for(int i = 0 ; i < 100 ; i++)
  *  Random 클래스를 이용
@@ -7,13 +9,11 @@ package com.call.start.jdk.random;
  *  1 ~ 100까지 범위에서 임의의 숫자 100개를 만들고 
  *  100개 중에 짝수가 있으면 짝수들의 합을 계산
  */
-import java.util.Random;
 
 public class Random_05 {
 
 	public static void main(String[] args) {
 
-		
 		Random rnd = new Random();
 		int sum = 0;
 		for (int i = 0; i < 100; i++) {
