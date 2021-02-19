@@ -20,6 +20,10 @@ public class ClassServiceV3 {
 	public void scope() {
 		System.out.print("숫자를 입력하세요");
 		int intNum1 = scan.nextInt();
+		
+		// method 선언명령문에 void 키워드가 있으면
+		// 이 위치에 return 명령문이 있는 것과 같다
+		return;
 	}
 
 	public void input() {
@@ -32,6 +36,7 @@ public class ClassServiceV3 {
 	// 그러니까 input 안에 있는 int intNum1, 2은 자기 것만 사용하고 끝나니까 int 빼고 변수만 써서 이어줘야함
 
 	public void algebra() {
+		
 
 		System.out.print(intNum1);
 		System.out.print(" + ");

@@ -43,6 +43,15 @@ public class Class_01 {
 	double dnum = 30D; // 혹은 (double)30
 	float fnum2 = 21F; // 혹은 (float)21
 	csv.add(dnum, fnum2);
+	
+	// 기본 구조 순서를 잊지말라고 쓰는 것
+	// 1.public static void main(String[] args) {} 이하 main method라 부른다
+	// 클래스 만들고 나면 main method를 만들고 그 아래에
+	//  2.눈에 보이지는 않지만 실행되는 ClassServiceV1(그 때마다 이름 다름)을 불러와주기 위해
+	// 	예를 들면 ClassServiceV1 csv(인스턴스) = new ClassServiceV1();를 쓴 후
+	//		ctrl + f11 키를 입력한다.
+	// 		3.그리고 나면 csv를 하고 ClassServiceV1에 적어둔 걸 보여줘야 하니까
+	//			인스턴스 csc.변수();를 짜서 실행해준다
 
 	
 	}
