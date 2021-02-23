@@ -14,6 +14,7 @@ public class Array_04 {
 			int num = rnd.nextInt(10) + 1;
 			intNums[i] = num;
 			// intNums[i]에서 i가 intNums라는 배열의 i번째 요소에 랜덤값 num을 저장한 것
+			// intNums[i]라는 말을 풀자면 i번에 위치한 intNums의 값
 			
 		}
 		Scanner scan = new Scanner(System.in);
