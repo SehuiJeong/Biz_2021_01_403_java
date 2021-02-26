@@ -32,11 +32,11 @@ public class Score_011 {
 			}
 			System.out.println("영어점수를 입력하세요");
 			System.out.print(">> ");
-			String strKor = scan.nextLine();
+			String strEng = scan.nextLine();
 			
 			System.out.println("수학점수를 입력하세요");
 			System.out.print(">> ");
-			String strKor = scan.nextLine();
+			String strMath = scan.nextLine();
 		}
 	}
 
