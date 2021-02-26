@@ -3,104 +3,95 @@ package com.callor.oop.controller;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
 import com.callor.oop.model.CartVO;
 
 public class CartControllerV4 {
 
 	public static void main(String[] args) {
 
-		List<CartVO> cartList = new ArrayList<CartVO>(); // CartVO가 담긴 cartList 선언
 		Scanner scan = new Scanner(System.in);
-		
+
+		List<CartVO> cartList = new ArrayList<CartVO>();
+
 		for (int i = 0; i < 3; i++) {
 
 			// 제목보이기
-			System.out.println("======================");
-			System.out.println("장바구니");
-			System.out.println("----------------------");
+			System.out.println("===================");
+			System.out.println("쇼핑카트 상품추가");
+			System.out.println("-------------------");
 
 			// 입력받기
-			System.out.print("구매자 성함 >> ");
-			String cartUserName = scan.nextLine();
 
-			System.out.print("상품명 >> ");
-			String cartPName = scan.nextLine();
+			System.out.println("구매자>>");
+			String strUserName = scan.nextLine();
+
+			System.out.println("상품명>>");
+			String strPName = scan.nextLine();
 
 			/*
-			 * 데이터를 키보드에서 입력받는 부분과
-			 * VO에 담아 리스트에 추가하는 부분을
-			 * 분리하여 코딩할 경우
-			 * 키보드에서 입력한 값을 정수변환하여
-			 * 값을 담아둘 intQty변수를
-			 * while() 실행 이전에 선언해 두어야 한다.
+			 * 데이터를 키보드에서 입력받는 부분과 VO에 담아 리스트에 추가하는 부분을 분리하여 코딩할 경우
+			 * 
+			 * 키보드에 입력한 값을 정수변환아여 값을 담아둘 intQty 변수를 while() 실행 이전에 선언해 두어야 한다.
 			 */
 			int intQty = 0;
 			while (true) {
-				System.out.print("수량 >> ");
-				String cartQty = scan.nextLine();
+				System.out.println("수량 >>");
+				String strQty = scan.nextLine();
 				try {
-					int intcartQty = Integer.valueOf(cartQty);
-					if(intQty < 1) {
-					System.out.println("수랑은 1이상");
-					continue;
+					intQty = Integer.valueOf(strQty);
+					if (intQty < 1) {
+						System.out.println("수량은 1이상");
+						continue;
 					}
 				} catch (Exception e) {
-					System.out.println("수량은 1이상만 입력하세요");
-				} // end catch 
-			}  // end try
-		} // end while
+					System.out.println("수량은 숫자로 입력하세요.");
+				}
+				break;
+			}
 
-		System.out.print("가격 >> ");
-		// 3000 이라고 입력하면 "3000"으로 입력되어
-		// 문자열이다
-		String cartPrice = scan.nextLine();
-		// "3000" 문자열형 숫자를 정수 3000으로 변경하여
-		// intPrice 변수에 저장
-		int intcartPrice = Integer.valueOf(cartPrice);
-		if (intcartPrice < 1000) {
-			System.out.println("가격은 1,000원 이상으로 입력하세요");
-			continue;
+			int intPrice = 0;
+			while (true) {
+				System.out.println("단가 >>");
+				String strPrice = scan.nextLine();
+				try {
+					intPrice = Integer.valueOf(strPrice);
+					if (intPrice < 1000) {
+						System.out.println("단가는 1000이상");
+						continue;
+					}
+				} catch (Exception e) {
+					System.out.println("단가는 숫자로 입력하세요.");
+				}
+				break;
+
+			}
+
+			// 카트정보 생성
+			CartVO cartVO = new CartVO();
+			cartVO.setCartUserName(strUserName);
+			cartVO.setCartPName(strPName);
+			cartVO.setCartPrice(intPrice);
+			cartVO.setCartQty(intQty);
+
+			// 카트정보 리스트에 추가하기
+			cartList.add(cartVO);
+		} // end for
+
+		System.out.println("===================");
+		System.out.println("구매자\t상품명\t단가\t수량\n");
+		System.out.println("-------------------");
+
+		// 배열에서는 배열.length 값을 참조하면 배열의 개수를 알수 있었다.
+		// List에서는 list.size() method를 호출하면 list개수를 return 해준다
+
+		int nSize = cartList.size();
+		for (int i1 = 0; i1 < nSize; i1++) {
+			System.out.printf("%s\t%s\t%d\t%d\n", cartList.get(i1).getCartUserName(), cartList.get(i1).getCartPName(),
+					cartList.get(i1).getCartPrice(), cartList.get(i1).getCartQty());
+
 		}
-
-		System.out.println("단가>> ");
-		String strPrice = scan.nextLine();
-		int intPrice = Integer.valueOf(strPrice);
-
-		// 카트정보 생성
-		CartVO cartVO = new CartVO();
-		cartVO.setCartUserName(cartUserName); // 여기는 Integer.valueOf 할 필요없음(오류남)
-		// 왜냐하면 Integer.valueOf는 문자열형은 숫자형으로 바꿔주는 용도
-		cartVO.setCartPName(cartPName);
-		cartVO.setCartQty(intcartQty);
-		cartVO.setCartPrice(intcartPrice);
-
-		// 카트정보 리스트에 추가하기
-		cartList.add(cartVO);
-	} // end for
-
-	System.out.println("=======================");
-	System.out.println("구매자\t상품명\t단가\t수량");
-	System.out.println("-----------------------");
-
-	// 배열에서는 배열.length 값을 참조하면
-	// 배열의 개수를 알 수 있었다
-	// List에서는 list.size() method를 호출하면
-	// list 개수를 return 해준다
-	// List의 개수가 수시로 변하기 때문에 크기가 달라진다.
-	// size를 하면 List안에 개수를 세며 실행된다.
-	// 그래서 int 변수에 list.size() method를 저장하고
-	// 그 다음에 그 변수를 for문 안에 입력한다
-	int nSize = cartList.size();
-	for( int i = 0; i<nSize; i++) {
-
-		System.out.printf("%s\t%s\t%d\t%d\t\n",
-				cartList.get(i).getCartUserName(),
-				cartList.get(i).getCartPName(),
-				cartList.get(i).getCartPrice(),
-				cartList.get(i).getCartQty());
+		System.out.println("================================");
 	}
-	System.out.println("==========================");
-
-}
 
 }
