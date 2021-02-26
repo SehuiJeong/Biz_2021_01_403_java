@@ -21,7 +21,7 @@ package com.callor.oop.model;
  * 캡슐화
  * getter, setter method의 코드를 몰라도
  * setIntKor() method는 intKor 인스턴스변수에 값을 저장
- * getInKor() method는 intKor 인스턴스변수에서 값을 읽기
+ * getIntKor() method는 intKor 인스턴스변수에서 값을 읽기
  * 기능을 한다는 것을 알 수 있다.
  * 
  *  코드 내용이 어떠한지 몰라도
@@ -46,7 +46,7 @@ public class ScoreVO {
 	 * 간접적으로 값을 저장하는 setIntKor() method를 선언
 	 * 
 	 * setIntKor() method는 점수를 문자열로 받아서
-	 * 점수로 변경한 다음 범위 검사를 수행하고
+	 * 정수로 변경한 다음 범위 검사를 수행하고
 	 * 유효성통과(정상적인 점수일경우)를 한 경우만
 	 * 국어 인스턴스변수(this.intKor)에 저장한다.
 	 * 
