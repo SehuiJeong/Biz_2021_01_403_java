@@ -20,8 +20,9 @@ import com.callor.oop.model.ScoreVO;
 public class Score_01 {
 	public static void main(String[] args) {
 
-		ScoreVO scVO = new ScoreVO(); // 클래스명 변수명 = new 클래스명(); 
+		ScoreVO scVO = new ScoreVO(); // 클래스명 객체명 = new 클래스명(); 
 		//--> 이걸 보고 객체를 생성한다고 말함 1의 부분에 해당
+		// 뜻은 : 객체(ScoreVO에 해당) 클래스의 인스턴스 변수(scVO) = 초기화한다(new ScoreVO()) 
 		// --> 그리고 저 scVO가 ScoreVO 클래스의 인스턴스에 해당
 		
 		Scanner scan = new Scanner(System.in);
@@ -47,7 +48,7 @@ public class Score_01 {
 			System.out.println(">>");
 			String strKor = scan.nextLine(); // 키보드를 통해 성적 받는 부분 2에 해당
 											// 키보드로 문자를 받을 때 같이 선언해주면 됨
-			scVO.intKor = Integer.valueOf(strKor); // --> 여기가 3번 인스턴스(scVO 부분에 해당)에 저장한다는 부분
+			scVO.intKor = Integer.valueOf(strKor); // --> 여기가 3번 객체의 인스턴스(scVO 부분에 해당) 변수에 저장한다는 부분
 			boolean bYes_1 = scVO.intKor < 50;
 			boolean bYes_2 = scVO.intKor > 100;
 			if(bYes_1 || bYes_2) {
