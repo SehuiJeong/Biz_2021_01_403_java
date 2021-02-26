@@ -54,7 +54,7 @@ public class ScoreVO {
 	 * 국어 점수는 -1로 세팅되어 있을 것이다.
 	 */
 	
-	public void setInKor(String strKor) {
+	public void setIntKor(String strKor) {
 		try {
 			int intKor = Integer.valueOf(strKor);
 			if(intKor >= 50 && intKor <= 100) {

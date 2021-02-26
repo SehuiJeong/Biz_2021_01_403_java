@@ -22,8 +22,8 @@ public class Score_02 {
 		String strName = scan.nextLine();
 		scoreVO.strName = strName;
 		
-		scoreVO.intKor = ssV1.intputScore("국어");
-		scoreVO.intKor = ssV1.intputScore("국어");
-		scoreVO.intKor = ssV1.intputScore("국어");
+		scoreVO.setIntKor(ssV1.inputScore("국어") + "");
+		scoreVO.setIntEng(ssV1.inputScore("영어") + "");
+		// scoreVO.intMath = ssV1.intputScore("국어"));
 	}
 }

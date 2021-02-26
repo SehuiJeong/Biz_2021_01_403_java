@@ -6,7 +6,7 @@ public class ScoreServiceV1 {
 
 	private Scanner scan = new Scanner(System.in);
 
-	public int intputScore() {
+	public int inputScore(String subject) {
 
 		while (true) {
 			System.out.println("점수를 입력하세요");
