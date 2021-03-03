@@ -25,10 +25,6 @@ public class ShopServiceV1 implements ShopService {
 		String userName = scan.nextLine();
 		System.out.println("상품이름 >> ");
 		String productName = scan.nextLine();
-		System.out.println("추가날짜 >> ");
-		String date = scan.nextLine();
-		System.out.println("추가 시각 >> ");
-		String time = scan.nextLine();
 
 		int qty = 0;
 		while (true) {
@@ -68,8 +64,6 @@ public class ShopServiceV1 implements ShopService {
 			ShopVO sVO = new ShopVO();
 			sVO.setUserName(userName);
 			sVO.setProductName(productName);
-			sVO.setDate(date);
-			sVO.setTime(time);
 			sVO.setQty(qty);
 			sVO.setPrice(price);
 			sVO.setTotal(qty * price);

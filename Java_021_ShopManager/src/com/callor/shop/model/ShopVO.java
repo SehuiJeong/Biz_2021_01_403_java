@@ -4,8 +4,6 @@ public class ShopVO {
 
 	private String userName;
 	private String productName;
-	private String date;
-	private String time;
 	private int qty;
 	private int price;
 	private int total;
@@ -20,18 +18,6 @@ public class ShopVO {
 	}
 	public void setProductName(String productName) {
 		this.productName = productName;
-	}
-	public String getDate() {
-		return date;
-	}
-	public void setDate(String date) {
-		this.date = date;
-	}
-	public String getTime() {
-		return time;
-	}
-	public void setTime(String time) {
-		this.time = time;
 	}
 	public int getQty() {
 		return qty;
@@ -53,7 +39,8 @@ public class ShopVO {
 	}
 	@Override
 	public String toString() {
-		return "CartVO [userName=" + userName + ", productName=" + productName + ", date=" + date + ", time=" + time
-				+ ", qty=" + qty + ", price=" + price + ", total=" + total + "]";
+		return "ShopVO [userName=" + userName + ", productName=" + productName + ", qty=" + qty + ", price=" + price
+				+ ", total=" + total + "]";
 	}
+	
 }
