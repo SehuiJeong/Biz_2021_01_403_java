@@ -9,7 +9,7 @@ import com.callor.shop.service.impl.ShopService;
 
 public class ShopServiceV1 implements ShopService {
 
-	// 선언과 초기화를 따로 한 이유 : 컴퓨터의 효율성을 높이기 위함
+	// 선언과 초기화를 따로 한 이유 : 컴퓨터의 효율성을 높이기 위함(메모리 관리때문에)
 	private List<ShopVO> shoppingList;
 	private Scanner scan;
 	
@@ -52,6 +52,7 @@ public class ShopServiceV1 implements ShopService {
 			String strPrice = scan.nextLine();
 			try {
 				price = Integer.valueOf(strPrice);
+				// Integer.valueOf(문자형) : 문자형을 숫자형으로 바꿔주는 용도 / 정수형을 실수형으로 만들 때도 쓰고 다양
 				if (price < 100) {
 					System.out.println("100원 이상 입력");
 					continue;
@@ -80,7 +81,7 @@ public class ShopServiceV1 implements ShopService {
 		System.out.println("구매인\t상품명\t단가\t수량\t합계");
 		System.out.println("------------------------------------------------");
 		
-		int nSize = shoppingList.size(); // 카트리스트에 있는 물건 갯수를 저장시켜서 nSize에 입력
+		int nSize = shoppingList.size(); // 카트리스트에 있는 물건 개수를 저장시켜서 nSize에 입력
 		int count = 0;
 		int sum = 0;
 		for (int i = 0; i < nSize; i++) {
