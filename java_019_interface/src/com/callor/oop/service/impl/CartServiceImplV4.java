@@ -79,7 +79,7 @@ public class CartServiceImplV4 implements CartService {
 
 		int nSize = cartList.size();
 		System.out.println("======================");
-		System.out.println("구매지\t상품명\t수량\t단가\t금액");
+		System.out.println("구매자\t상품명\t수량\t단가\t금액");
 		for(int i = 0; i < nSize; i++) {
 			System.out.print(cartList.get(i).getUserName() + "\t");
 			System.out.print(cartList.get(i).getProductName() + "\t");
