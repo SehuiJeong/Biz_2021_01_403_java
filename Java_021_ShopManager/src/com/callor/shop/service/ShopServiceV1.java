@@ -35,7 +35,7 @@ public class ShopServiceV1 implements ShopService {
 
 			try {
 				qty = Integer.valueOf(strqty);
-				if (qty <= 0) {
+				if (qty < 1) {
 					System.out.println("1개 이상 입력");
 					continue;
 				}
@@ -52,8 +52,8 @@ public class ShopServiceV1 implements ShopService {
 			String strPrice = scan.nextLine();
 			try {
 				price = Integer.valueOf(strPrice);
-				if (price <= 100) {
-					System.out.println("100원 초과 입력");
+				if (price < 100) {
+					System.out.println("100원 이상 입력");
 					continue;
 				}
 				break;
@@ -80,7 +80,7 @@ public class ShopServiceV1 implements ShopService {
 		System.out.println("구매인\t상품명\t단가\t수량\t합계");
 		System.out.println("------------------------------------------------");
 		
-		int nSize = shoppingList.size();
+		int nSize = shoppingList.size(); // 카트리스트에 있는 물건 갯수를 저장시켜서 nSize에 입력
 		int count = 0;
 		int sum = 0;
 		for (int i = 0; i < nSize; i++) {
