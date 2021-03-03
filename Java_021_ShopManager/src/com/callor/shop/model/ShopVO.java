@@ -2,6 +2,7 @@ package com.callor.shop.model;
 
 public class ShopVO {
 
+	// 정보 은닉
 	private String userName;
 	private String productName;
 	private int qty;

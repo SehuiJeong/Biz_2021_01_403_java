@@ -7,9 +7,9 @@ import java.util.Scanner;
 import com.callor.shop.model.ShopVO;
 import com.callor.shop.service.impl.ShopService;
 
-// ShopService가 이름이 같으면 오류남
 public class ShopServiceV1 implements ShopService {
 
+	// 선언과 초기화를 따로 한 이유 : 컴퓨터의 효율성을 높이기 위함
 	private List<ShopVO> shoppingList;
 	private Scanner scan;
 	
@@ -18,6 +18,8 @@ public class ShopServiceV1 implements ShopService {
 		scan = new Scanner(System.in);
 	}
 
+	// 객체 협력
+	// 전체 손님 수 계산한 것
 	@Override
 	public void inputShop() {
 
@@ -33,7 +35,7 @@ public class ShopServiceV1 implements ShopService {
 
 			try {
 				qty = Integer.valueOf(strqty);
-				if (qty < 1) {
+				if (qty <= 1) {
 					System.out.println("1개 이상 입력");
 					continue;
 				}
@@ -50,7 +52,7 @@ public class ShopServiceV1 implements ShopService {
 			String strPrice = scan.nextLine();
 			try {
 				price = Integer.valueOf(strPrice);
-				if (price < 100) {
+				if (price <= 100) {
 					System.out.println("100원 이상 입력");
 					continue;
 				}
@@ -58,7 +60,6 @@ public class ShopServiceV1 implements ShopService {
 			} catch (Exception e) {
 				System.out.println("숫자로만 입력하시오.");
 			}
-
 
 		}
 			ShopVO sVO = new ShopVO();
@@ -70,6 +71,7 @@ public class ShopServiceV1 implements ShopService {
 			shoppingList.add(sVO);
 	}
 
+	// 출력하기 위한 것
 	@Override
 	public void printShop() {
 
@@ -98,6 +100,7 @@ public class ShopServiceV1 implements ShopService {
 
 	}
 
+	// 특정 손님만 계산한 것
 	@Override
 	public void sameNameShop() {
 		System.out.println("======================================");
