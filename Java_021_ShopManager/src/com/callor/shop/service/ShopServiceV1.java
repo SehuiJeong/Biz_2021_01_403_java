@@ -38,8 +38,9 @@ public class ShopServiceV1 implements ShopService {
 				if (qty < 1) {
 					System.out.println("1개 이상 입력");
 					continue;
-				}
-				break;
+				} else {
+					
+				} break;
 			} catch (Exception e) {
 				System.out.println("수량은 숫자로 입력");
 			}
@@ -55,7 +56,8 @@ public class ShopServiceV1 implements ShopService {
 				// Integer.valueOf(문자형) : 문자형을 숫자형으로 바꿔주는 용도 / 정수형을 실수형으로 만들 때도 쓰고 다양
 				if (price < 100) {
 					System.out.println("100원 이상 입력");
-					continue;
+				} else {
+					// else{} 대신에 continue;를 입력해도 되지만 되도록 명령어를 쓰지말자는 말이 있음
 				}
 				break;
 			} catch (Exception e) {
