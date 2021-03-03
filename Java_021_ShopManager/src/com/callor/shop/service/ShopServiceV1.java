@@ -35,7 +35,7 @@ public class ShopServiceV1 implements ShopService {
 
 			try {
 				qty = Integer.valueOf(strqty);
-				if (qty <= 1) {
+				if (qty <= 0) {
 					System.out.println("1개 이상 입력");
 					continue;
 				}
@@ -53,7 +53,7 @@ public class ShopServiceV1 implements ShopService {
 			try {
 				price = Integer.valueOf(strPrice);
 				if (price <= 100) {
-					System.out.println("100원 이상 입력");
+					System.out.println("100원 초과 입력");
 					continue;
 				}
 				break;
