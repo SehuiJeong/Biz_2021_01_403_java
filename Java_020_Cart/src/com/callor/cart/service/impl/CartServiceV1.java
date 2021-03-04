@@ -11,6 +11,7 @@ public class CartServiceV1 implements CartService {
 
 	private List<CartVO> cartList;
 	private Scanner scan;
+	
 	public CartServiceV1() {
 		cartList = new ArrayList<CartVO>();
 		scan = new Scanner(System.in);
