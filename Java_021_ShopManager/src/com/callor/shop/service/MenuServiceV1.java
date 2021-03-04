@@ -25,7 +25,7 @@ public class MenuServiceV1 implements MenuService {
 			System.out.println("QUIT. 끝내기");
 			System.out.println("========================================");
 			System.out.println("선택 >> ");
-			String strMenu = scan.nextLine();
+			String strMenu = scan.nextLine(); // 스캔에 입력을 하면 그 순간 그 글자가 String의 변수에 저장이 된다
 			if (strMenu.equals("QUIT")) {
 				break;
 			}

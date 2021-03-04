@@ -4,6 +4,6 @@ public interface ShopService {
 	
 	public void inputShop();
 	public void printShop();
-	public void sameNameShop();
+	public void printSameName();
 
 }

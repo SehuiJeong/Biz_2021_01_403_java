@@ -21,7 +21,7 @@ public class ShopEx_01 {
 			} else if (menu == 2) {
 				sService.printShop();
 			} else if (menu == 3) {
-				sService.sameNameShop();
+				sService.printSameName();
 			} 
 		}
 			
