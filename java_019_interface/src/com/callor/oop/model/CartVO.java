@@ -1,7 +1,7 @@
 package com.callor.oop.model;
 
 /*
- * 카트정보를 담아 App에서 사용할
+ * 카트정보를 담아 앱(APP)에서 사용할
  * Value Object 클래스
  * 구매자, 상품명, 규격, 날짜, 시각, 수량, 구매단가, 구매금액
  */
