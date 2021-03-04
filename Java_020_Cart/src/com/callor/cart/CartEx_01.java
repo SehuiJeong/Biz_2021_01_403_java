@@ -13,7 +13,7 @@ public class CartEx_01 {
 		CartService cService = new CartServiceV1();
 		
 		while(true) {
-			Integer menu = mService.selectMenu(); // int 선언하면 if문 못쓰니까 Integer사용
+			Integer menu = mService.selectMenu(); // int를 선언하면 if문 못쓰니까 Integer사용
 			if(menu == null) {
 				break;
 			} else if (menu == 1) {
