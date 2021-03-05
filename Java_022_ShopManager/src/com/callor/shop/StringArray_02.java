@@ -16,6 +16,7 @@ public class StringArray_02 {
 		String[] cartList = strCart.split(":"); // {"홍길동", "초코파이"} 
 		
 		for(String s : cartList) {
+
 			System.out.println(s);
 		}
 		
